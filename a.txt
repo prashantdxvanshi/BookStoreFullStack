@@ -1,0 +1,22 @@
+for initialize frontend we use npm create react or vite@latest etc.. 
+for initialize backend we use npm init which create node js   this provide runtime environment to run javascript language in server side
+and for express npm install express this is the framework of nodejs which is used to create application or api on server side
+what is node js 
+node js is open source platform to provide run time environment to run js index.js is entry point in backend and app.jsx is entry point in frontend
+FRONTEND- we use tailwind css library and in it we use daisy ui tailwind library which provide inbuilt components like modal in login sign up we have used modal and to extract information of the form we have used react hook form  and for creation routers we use react router routes which we have to install first by using documention on the internet 
+BACKEND- npm init to create nodejs in server side
+npm install express to create server api 
+customize in package.json start:"node index.js" to start server by name of npm start  to restart server automatically we install npm i nodemon and change node index.js to nodemon index.js in package.json 
+PORT SECURITY- becoz port infor is sensitive so we use separate .env file for it and create new variable in index.js   const PORT=process.env.PORT || 4000 this means that server will start at PORT (whatever stored in PORT) if the PORT value server is busy then it will start at by dafualt value 4000(whatever written after || it) also change small port variable to new variable name PORT as well as we have to install dotenv and import also in index.js and we have to dotenv.config(); also 
+IMPORT SYNTAX-- if we want to use import keyword to import anything then we have to wrtie "type":"module", in package.json other we have to use require keyword to import anything 
+dotenv.config(); const PORT= process.env.PORT || 4000 order will have to be the same as written 
+DATABASE-- to connect mongodb we have two options first either use cloud version of mongodb or install my mongodb in my system
+copy string from the mongodbcompass and paste it in .env file in variable MongoDBURI  and then use try catch method in index.js for connect to mongoose first install  npm i mongoose and then use mongoose.connect(uri) from process.env.uri after importing it into index.js
+const usermodel=mongoose.model('users',user) this means that user name schema stored in users file in db and in the schema data is imported by usermodel variable mtlb user nam ka schema users nam ki file me store hoga database me or is file(called collection) ke is schema me jo data ayga vo usermodel nam ka variable layga means usermodel.{name:dasdfas,email:djskafja,... whatever schema style}
+to create schema for anything we use const schema=mongoose.schema and then const user=new schema{name:string , email:string like}
+achi bat rhegi ki database ka logic ek alg file me likha jay db.js krke agr hm esa krte h tb is file se hme usermodel todosmodel ...so on export krna hoga and then import krna hoga apni index.js file me to fill entry in that schema 
+to integrate frontend to backend we use axios
+axios backend ke jis url pe data h usko leke ata h frontend pe or store krta h kisi state me like here book or us url pe data kese phuchta h??? us url pe data mongodb ke backend se  connection ke bad bheja jata h 
+mtlb frontend me jis component pr hme data chaiye us component me axios ko import krenge ab ek state bnaynge jisme data rkhske , is state me axios ki help se data ko laynge using axios.get("URL") via useEffect ye URL vo URL h jispr mongodb data bhej rha h ab mongodb is url pe data kese bhej rha h ????
+// ye jo url h vo vastb me hmara backend ka server url h with some router
+index.js me url define krenge by app.use("/book",BookRoute) (whatever we want)   is url /book se  BookRoute pe jaynge  ye BookRoute getBook function ko call krega ye function bookmodel me data find krega agr data ata h tb ye function get krlega is bookmodel me mongoose phle se import h or ye mongoose hmare backend ke url se connect krliya tha hmne phle hi  
