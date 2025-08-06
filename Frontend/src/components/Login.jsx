@@ -21,7 +21,7 @@ function Login() {
       console.log(res.data);
       if(res.data){
         // alert
-        toast.success("login successfully");
+        toast.success("login successfully")
       }
       localStorage.setItem("Users:", JSON.stringify(res.data.userfind));
     }).catch((err)=>{
